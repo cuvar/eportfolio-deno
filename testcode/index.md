@@ -11,6 +11,11 @@ Deno Projekt: kleine Webanwendung. HTML vorher vorschreiben zum clonen und damit
 - etwas mit: Deno always dies on uncaught errors
 - irgendwas mit Promises
 - irgendwas mit packages: deno.land/x/
+
   - https://github.com/zhmushan/abc
   - https://dev.to/craigmorten/what-is-the-best-deno-web-framework-2k69
   - --importmap
+
+- combine everything
+- clear console via Deno.run
+- http server
