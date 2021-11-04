@@ -16,7 +16,7 @@ window.onload = (e: Event): void => {
 };
 
 window.onunload = (e: Event): void => {
-  console.log(blue(`GRegistered event: ${e.type}`));
+  console.log(blue(`Registered event: ${e.type}`));
 };
 
 // console.log("This is a beginning");

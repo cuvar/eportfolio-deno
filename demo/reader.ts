@@ -1,5 +1,5 @@
-// cmd win: deno run .\demo\reader.ts
-// cmd unixoid: deno run demo/reader.ts
+// cmd win: deno run --allow-read .\demo\reader.ts
+// cmd unixoid: deno run --allow-read demo/reader.ts
 
 import { readLines } from "https://deno.land/std@0.113.0/io/mod.ts";
 import { copy } from "https://deno.land/std@0.113.0/io/util.ts";
@@ -22,7 +22,8 @@ async function lineReader(file: string) {
 
 // reference: https://deno.land/manual@v1.15.3/examples/unix_cat
 async function readWithCatImplementation(filename: string) {
-  const file = await Deno.open(filename);
+  const filepath = path.join(Deno.cwd(), filename);
+  const file = await Deno.open(filepath);
   await copy(file, Deno.stdout);
   file.close();
 }
@@ -30,7 +31,7 @@ async function readWithCatImplementation(filename: string) {
 // ------------------------------------------------------------
 // entry point
 
-let filename: string = "./res/test.txt";
+let filename: string = "./demo/res/test.txt";
 
 await basicReader(filename);
 await lineReader(filename);
