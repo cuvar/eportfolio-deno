@@ -10,3 +10,5 @@ if (Deno.args.length == 0) {
 let content: string = "This is the content";
 
 await Deno.writeTextFile("demo/res/" + Deno.args[0], content);
+
+let a = require("module.js");
