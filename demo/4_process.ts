@@ -4,7 +4,7 @@
 
 // Example 1: simple subprocess
 async function process1() {
-  const p1 = Deno.run({
+  const p1: any = Deno.run({
     cmd: ["echo", "process1: Hello"],
   });
   await p1.status();
@@ -12,11 +12,11 @@ async function process1() {
 
 // Example 2: write to file via subprocess
 async function process2() {
-  const p = Deno.run({
+  const p: any = Deno.run({
     cmd: ["deno", "run", "--allow-write", "3_writer.ts", "res/test3.txt"],
   });
 
-  const { code } = await p.status();
+  const { code }: { code: number } = await p.status();
 
   if (code === 0) {
     console.log("process2: Wrote to file");
@@ -28,8 +28,8 @@ async function process2() {
 // Example 3: read from file via subprocess
 // https://deno.land/manual@v1.15.3/examples/subprocess
 async function process3() {
-  const fileNames = Deno.args;
-  const p = Deno.run({
+  const fileNames: string[] = Deno.args;
+  const p: any = Deno.run({
     cmd: [
       "deno",
       "run",
@@ -41,16 +41,16 @@ async function process3() {
     stderr: "piped",
   });
 
-  const { code } = await p.status();
+  const { code }: { code: number } = await p.status();
 
   // Reading the outputs closes their pipes
-  const rawOutput = await p.output();
-  const rawError = await p.stderrOutput();
+  const rawOutput: any = await p.output();
+  const rawError: any = await p.stderrOutput();
 
   if (code === 0) {
     await Deno.stdout.write(rawOutput);
   } else {
-    const errorString = new TextDecoder().decode(rawError);
+    const errorString: string = new TextDecoder().decode(rawError);
     console.log(errorString);
   }
 

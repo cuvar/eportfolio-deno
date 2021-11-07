@@ -8,13 +8,13 @@ import * as path from "https://deno.land/std@0.113.0/path/mod.ts";
 
 // reference: https://deno.land/manual@v1.15.3/examples/read_write_files
 async function basicReader(filename: string) {
-  const text = await Deno.readTextFile(filename);
+  const text: string = await Deno.readTextFile(filename);
   console.log(text);
 }
 
 async function lineReader(file: string) {
-  const filename = path.join(Deno.cwd(), file);
-  let fileReader = await Deno.open(filename);
+  const filename: string = path.join(Deno.cwd(), file);
+  let fileReader: any = await Deno.open(filename);
 
   for await (let line of readLines(fileReader)) {
     console.log(line);
@@ -23,8 +23,8 @@ async function lineReader(file: string) {
 
 // reference: https://deno.land/manual@v1.15.3/examples/unix_cat
 async function readWithCatImplementation(filename: string) {
-  const filepath = path.join(Deno.cwd(), filename);
-  const file = await Deno.open(filepath);
+  const filepath: string = path.join(Deno.cwd(), filename);
+  const file: any = await Deno.open(filepath);
   await copy(file, Deno.stdout);
   file.close();
 }

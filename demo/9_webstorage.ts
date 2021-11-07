@@ -6,9 +6,9 @@ localStorage.setItem("demo-data-local", "e-Portfolio");
 localStorage.setItem("demo-data-local2", "for");
 sessionStorage.setItem("demo-data-session", "Deno");
 
-const storedDataLocal = localStorage.getItem("demo-data-local");
-const storedDataLocal2 = localStorage.getItem("demo-data-local2");
-const storedDataSession = sessionStorage.getItem("demo-data-session");
+const storedDataLocal: string = localStorage.getItem("demo-data-local");
+const storedDataLocal2: string = localStorage.getItem("demo-data-local2");
+const storedDataSession: string = sessionStorage.getItem("demo-data-session");
 console.log(`${storedDataLocal} ${storedDataLocal2} ${storedDataSession}`);
 
 console.log(`localStorage.length: ${localStorage.length}`);

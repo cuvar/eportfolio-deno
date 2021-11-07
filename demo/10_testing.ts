@@ -27,7 +27,7 @@ Deno.test("Basic testing with Deno", () => {
   const y: number[] = greatFunction();
   assertArrayIncludes(y, [8]);
 
-  const str = "abcdefghi";
+  const str: string = "abcdefghi";
   assertMatch(str, new RegExp("def"));
 
   assertPowerOf(8, 2);
@@ -42,7 +42,7 @@ function greatFunction(): number[] {
 }
 
 function assertPowerOf(actual: number, expected: number, msg?: string): void {
-  let received = actual;
+  let received: number = actual;
   while (received % expected === 0) received = received / expected;
   if (received !== 1) {
     if (!msg) {

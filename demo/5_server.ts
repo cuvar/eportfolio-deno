@@ -7,24 +7,24 @@ import * as path from "https://deno.land/std@0.113.0/path/mod.ts";
 
 const addr = ":8080";
 
-async function getHtmlFromFile() {
-  const filename = path.join(Deno.cwd(), "res/index.html");
-  const file = await Deno.open(filename);
+async function getHtmlFromFile(): Promise<string> {
+  const filename: string = path.join(Deno.cwd(), "res/index.html");
+  const file: any = await Deno.open(filename);
 
-  const decoder = new TextDecoder("utf-8");
-  const content = decoder.decode(await Deno.readAll(file));
+  const decoder: any = new TextDecoder("utf-8");
+  const content: string = decoder.decode(await Deno.readAll(file));
   file.close();
   return content;
 }
 
-function replacePlaceHolder(html: string, quote: string) {
+function replacePlaceHolder(html: string, quote: string): string {
   return html.replace("{{quote}}", quote);
 }
 
 async function handler(request: Request): Promise<Response> {
   let body: string = await getHtmlFromFile();
-  const response = await fetch("https://api.kanye.rest/");
-  const quote = await response.json();
+  const response: any = await fetch("https://api.kanye.rest/");
+  const quote: any = await response.json();
   body = replacePlaceHolder(body, quote["quote"]);
 
   return new Response(body, {

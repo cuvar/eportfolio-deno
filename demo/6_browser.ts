@@ -5,5 +5,5 @@
 console.log(location.href);
 console.log(location);
 
-const response = await fetch("./orgs/denoland");
+const response: any = await fetch("./orgs/denoland");
 console.log(response);
