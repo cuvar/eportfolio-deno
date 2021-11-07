@@ -1,4 +1,4 @@
-// reference: https://deno.land/manual@v1.15.3/linking_to_external_code/import_maps
+// reference: https://deno.land/manual@v1.15.3/getting_started/first_steps
 // cmd win: deno run .\demo\getting_started.ts
 // cmd unixoid: deno run demo/getting_started.ts
 

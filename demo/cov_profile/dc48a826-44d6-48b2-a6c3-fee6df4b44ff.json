@@ -1,0 +1,71 @@
+{
+  "scriptId": "80",
+  "url": "file:///Users/I538956/workspace/dhbw/eportfolio-deno/demo/10_tooling.ts",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 0,
+          "endOffset": 4378,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [
+        {
+          "startOffset": 214,
+          "endOffset": 510,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "someArbitraryFunction",
+      "ranges": [
+        {
+          "startOffset": 513,
+          "endOffset": 564,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "greatFunction",
+      "ranges": [
+        {
+          "startOffset": 565,
+          "endOffset": 624,
+          "count": 1
+        }
+      ],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "assertPowerOf",
+      "ranges": [
+        {
+          "startOffset": 625,
+          "endOffset": 963,
+          "count": 1
+        },
+        {
+          "startOffset": 746,
+          "endOffset": 777,
+          "count": 3
+        },
+        {
+          "startOffset": 802,
+          "endOffset": 961,
+          "count": 0
+        }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}
