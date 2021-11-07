@@ -1,6 +1,6 @@
 // reference: https://www.telerik.com/blogs/how-to-compile-rust-into-webassembly-run-in-deno
-// cmd win: deno run .\wasm.ts
-// cmd unixoid: deno run --allow-read wasm.ts
+// cmd win: deno run .\12_wasm.ts
+// cmd unixoid: deno run --allow-read 12_wasm.ts
 
 // 0. install rust
 // 1. rustup target add wasm32-unknown-unknown
@@ -20,5 +20,5 @@ const wasmModule = new WebAssembly.Module(wasmCode);
 const wasmInstance = new WebAssembly.Instance(wasmModule);
 const age = wasmInstance.exports.age as CallableFunction;
 
-const yourAge = age(2020, 1994);
+const yourAge = age(2021, 2001);
 console.log(yourAge);

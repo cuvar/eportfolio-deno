@@ -1,5 +1,6 @@
-// cmd win: deno run --allow-read .\reader.ts
-// cmd unixoid: deno run --allow-read reader.ts
+// resource: https://deno.land/manual@v1.15.3/examples/read_write_files
+// cmd win: deno run --allow-read .\2_reader.ts
+// cmd unixoid: deno run --allow-read 2_reader.ts
 
 import { readLines } from "https://deno.land/std@0.113.0/io/mod.ts";
 import { copy } from "https://deno.land/std@0.113.0/io/util.ts";

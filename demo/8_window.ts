@@ -1,6 +1,6 @@
 // reference: https://deno.land/manual@v1.15.3/runtime/program_lifecycle
-// cmd win: deno run .\window.ts
-// cmd unixoid: deno run window.ts
+// cmd win: deno run .\8_window.ts
+// cmd unixoid: deno run 8_window.ts
 
 import { blue, red } from "https://deno.land/std@0.113.0/fmt/colors.ts";
 

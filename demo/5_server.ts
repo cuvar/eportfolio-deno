@@ -1,6 +1,6 @@
 // reference: https://deno.land/manual@v1.15.3/examples/http_server
-// cmd win: deno run --allow-net .\server.ts
-// cmd unixoid: deno run --allow-net server.ts
+// cmd win: deno run --allow-net --allow-read .\5_server.ts
+// cmd unixoid: deno run --allow-net --allow-read 5_server.ts
 
 import { listenAndServe } from "https://deno.land/std@0.113.0/http/server.ts";
 import * as path from "https://deno.land/std@0.113.0/path/mod.ts";
@@ -8,8 +8,7 @@ import * as path from "https://deno.land/std@0.113.0/path/mod.ts";
 const addr = ":8080";
 
 async function getHtmlFromFile() {
-  const filename = path.join(Deno.cwd(), "./res/index.html");
-  console.log(filename);
+  const filename = path.join(Deno.cwd(), "res/index.html");
   const file = await Deno.open(filename);
 
   const decoder = new TextDecoder("utf-8");
@@ -24,7 +23,6 @@ function replacePlaceHolder(html: string, quote: string) {
 
 async function handler(request: Request): Promise<Response> {
   let body: string = await getHtmlFromFile();
-
   const response = await fetch("https://api.kanye.rest/");
   const quote = await response.json();
   body = replacePlaceHolder(body, quote["quote"]);
