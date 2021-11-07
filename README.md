@@ -25,9 +25,9 @@ console.log(red("Hello world"));
 
 At first, a small explaination what this code actually does. You can skip this part if you just want to check your installation for the e-Portfolio presentation, as it will be explained anyways.
 
-The goal is simply to write the string `Hello world` to the console, however, not in standard white or black, but in a red font. This is accomplished with a additional module from Deno's standard library called `fmt`. However unlike NodeJs, Deno does not use CommonJS and it's `require()` function to import modules - it rather imports modules directly from their source. This can be a relative path such as `./utils.ts` or a url as you can see in the code above.
+The goal is simply to write the string `Hello world` to the console, however, not in standard white or black, but in a red font. This is accomplished with a additional module from Deno's standard library called `fmt`. However unlike NodeJs, Deno does not use CommonJS and its `require()` function to import modules - it rather imports modules directly from their source. This can be a relative path such as `./utils.ts` or a URL as you can see in the code above.
 
-To get started, run `deno run demo/getting_started.ts` or `deno run .\demo\getting_started.ts` in Windows to run the first script. If that's your first time running this script, you'll see some additional logging in the console/terminal:
+To get started, run `deno run demo/getting_started.ts` or `deno run .\demo\getting_started.ts` in Windows to start the first script. If that's your first time running this script, you'll see some additional logging in the console/terminal:
 
 ![Download](res/getting_started.png)
 
