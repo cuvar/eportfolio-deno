@@ -32,3 +32,7 @@ To get started, run `deno run demo/getting_started.ts` or `deno run .\demo\getti
 ![Download](res/getting_started.png)
 
 This shows you that Deno downloaded all the packages you included in your code - in our example the `color.ts` file from `https://deno.land`. If this is working on your system you're well prepared for using Deno.
+
+
+## Presentation
+The presentation for this e-Portfolio can be found [here](https://github.com/cuvar/eportfolio-deno/blob/main/presentation/e-Portfolio.pdf).
