@@ -57,6 +57,6 @@ async function process3() {
   Deno.exit(code);
 }
 
-await process1();
+// await process1();
 // await process2();
-// await process3();
+await process3();

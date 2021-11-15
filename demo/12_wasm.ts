@@ -2,6 +2,7 @@
 // cmd win: deno run .\12_wasm.ts
 // cmd unixoid: deno run --allow-read 12_wasm.ts
 
+// how to get started with deno and wasm:
 // 0. install rust
 // 1. rustup target add wasm32-unknown-unknown
 // 2. cargo install wasm-gc
@@ -12,7 +13,7 @@
 // 7. wasm-gc target/wasm32-unknown-unknown/debug/deno_wasm.wasm
 // 8. edit deno file
 
-const wasmCode: string = await Deno.readFile(
+const wasmCode: any = await Deno.readFile(
   "./deno-wasm/target/wasm32-unknown-unknown/debug/deno_wasm.wasm"
 );
 

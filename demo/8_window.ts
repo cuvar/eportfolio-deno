@@ -20,6 +20,6 @@ window.onunload = (e: Event): void => {
 };
 
 // console.log("This is a beginning");
-const inputData: string = prompt("Please enter input:");
-alert(inputData ?? "no data to alert ");
+const inputData: string | null = prompt("Please enter input:");
+alert(inputData ?? "no data to alert");
 const cnf: boolean = confirm("Do you want to erase all the files?");
