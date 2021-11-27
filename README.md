@@ -4,7 +4,7 @@ This is the repository for my e-Portfolio for software engineering course 2021/2
 
 ## Installation
 
-Deno ships with a single executable. It works on all common operating systems such as Windows 10, MacOS and some Linux distributions. For Deno to work, you need to install the Deno executable. For further information concerning installation, please refer to [Deno's homepage](https://deno.land/manual@v1.15.3/getting_started/installation). Here you can find any information concerning the installation.
+Deno ships with a single executable. It works on all common operating systems such as Windows 10, MacOS and some Linux distributions. For getting Deno to work, you need to install the Deno executable. For further information concerning installation, please refer to [Deno's homepage](https://deno.land/manual@v1.15.3/getting_started/installation). Here you can find any information concerning the installation.
 After you've installed Deno, you're good to go.
 
 Nevertheless, if you've any troubles during the installation process, feel free to reach out to me!
