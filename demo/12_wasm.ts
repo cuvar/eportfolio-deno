@@ -17,6 +17,8 @@ const wasmCode: any = await Deno.readFile(
   "./deno-wasm/target/wasm32-unknown-unknown/debug/deno_wasm.wasm"
 );
 
+// console.log("wasmCode: ", wasmCode);
+
 const wasmModule: any = new WebAssembly.Module(wasmCode);
 const wasmInstance: any = new WebAssembly.Instance(wasmModule);
 const age: any = wasmInstance.exports.age as CallableFunction;
